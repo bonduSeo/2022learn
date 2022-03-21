@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contents :nth-child(7) { /* contents 의 n번째 자식요소에 적용*/
+            color: red;
+            
+        }
+        .contents p:nth-child(3) { /* contents 의 n번째 요소중 p요소에게*/
+            color: green;
+        }
+        .contents p:nth-of-type(3) { /*content의 p 요소 중에서 3번째*/
+            color: blue;
+        }
+        .contents p:nth-last-of-type(3) { /*   뒤에서 n번째 p*/
+            background-color: aqua;
+        }
+        .contents :nth-child(even) {    /*홀 odd 짝 even*/
+            background-color: beige;
+        }
+        .contents :nth-child(2n+1) {  /* 3n+1 이런식으로도 표현가능ㄴ*/
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <h2>이용안내</h2>
+        <p>p1</p>
+        <p>p2</p>
+        <h2>객실소개</h2>
+        <p>p3</p>
+        <h2>예약 방법 및 요금</h2>
+        <p>p4</p>
+    </div>
+</body>
+</html>

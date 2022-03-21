@@ -1,0 +1,56 @@
+<!-- navi1을 스스로해본것
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       ul {
+           background-color: antiquewhite;
+       }
+       .navi ul li {
+           display: inline-block;
+           width: 150px;
+           padding: 10px;
+       }
+       .navi a:link, .navi a:visited {
+           display: block;
+           font-size: 14px;
+           color: black;
+           padding: 10px;
+           text-decoration: none;
+           text-align: center;
+        
+       }
+       a:hover, a:focus {
+           
+       }
+
+    </style>
+</head>
+<body>
+    <nav class="navi">
+        <ul>
+            <li><a href="http://www.naver.com" target="_blink">이용안내</a></li>  <!-- shft alt 아래 하면 복사--> <!--target blink 새창뜨기-->
+            <li><a href="http://www.daum.net">객실소개</a></li>
+            <li><a href="http://www.google.com">예약방법 및 요금</a></li>
+            <li><a href="http://www.airbnb.com">예약하기</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+<!-- hover랑 focus랑?????
+focus 는 인풋을 받을수있는 항목에만 적용 키보드입력, 클릭 등
+input, select, textarea, a 태그  등등
+img 나 div 등도 tabindex 속성을 주면 적용됨 
+<img tabindex="1"    > 뭐이렇게
+
+액티브나 포커스를 이용하면
+클릭할때 이미지가 크고작아지게 등 가능
+배경색 바뀌게 등 가능
+
+tabindex   는 탭 누르면 다음다음 으로 이동하는 순서 지정. 1부터 2345...-->

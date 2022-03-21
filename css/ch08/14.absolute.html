@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{ margin:0; padding: 0;}
+    html, body {height: 100%;}
+    #container {height:100%; padding:10px;}
+    .item {
+       /* position: relative; /* 추가된부분*/
+        display: inline-block;
+        border: 1px solid gray;
+        width: 100px;
+        height: 200px;
+        margin-right: 10px;
+    }
+    .item > div:nth-child(1) { height:70%}
+    .item .info { position: relative;  /*추가된부분2 relative는 부모역할때문에 탑,레프트등 안주는경우 있음. */
+                  height: 30%; 
+                  background-color: antiquewhite;}
+    .item .info div:first-child {position: absolute; left: 5px; top: 5px;}
+    /* 상위요소가 대부분 static이기 때문에 부모는 body에게로까지 감. 그래서 위에 포지션변경추가
+    근데 absolute는 top이나 left 꼭 값을 줘야한다. 아니면 위치를 예상못함 */
+</style>
+</head>
+<body>
+    <div id="container">
+        <div class="item">
+            <div>이미지</div>
+            <div class ="info">
+                <div>내용</div>
+            </div>
+        </div>
+        <div class="item">
+            <div>이미지</div>
+            <div class ="info">
+                <div>내용</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

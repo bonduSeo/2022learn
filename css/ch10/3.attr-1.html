@@ -1,0 +1,29 @@
+<!-- 326쪽 속성선택자 attribute selector
+태그선택자 뒤에 적어서 더 디테일하게.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[target] { background-color: yellow;}
+        a[href] {color: aquamarine;}
+        a[href="#1"] {color: red;}
+        a[target][href="#2"] {background-color: green ;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a target="_blank">메인메뉴</a></li>
+        <li><a href="#1" target="_blank">메인 1</a></li>
+        <li><a href="#2" target="_blank">메인 2</a></li>
+        <li><a href="#3">메인 3</a></li>
+        <li><a href="#4">메인 4</a></li>
+    </ul>
+
+</body>
+</html>
+
+<!--  안됨 되게하기-->

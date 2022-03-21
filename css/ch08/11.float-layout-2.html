@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {text-align: center; font-size: 3em; vertical-align: middle;  }
+        #container {width: 1200px; margin: 20px;}
+        header {height: 120px; background-color: antiquewhite;}
+        section {float: left; height: 600px;}
+        footer {clear: both; height: 100px; background-color: rgb(77, 77, 100);}
+        section:nth-child(1) {background-color: aqua; width: 300px;}
+        section:last-child {width: 900px; background-color: rgb(255, 212, 94);} 
+        /*앞에 선택자 main 없었을땐 안됫는디 암튼 이런방법도 있음
+        질문탐구결과 =>부모기준으로 자식 번호
+        그러니까 메인 없을땐 위 div의 두번째 차일드
+        자세한내용은 구글 css nth-child 검색
+        */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>헤더</header>
+        <main>
+            <section id="st1">사이드 바</section>
+            <section id="st2">본문</section>
+        </main>
+        <footer>푸터</footer>
+    </div>
+</body>
+
+</html>

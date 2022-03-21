@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:enabled {background-color: rgb(209, 159, 255);} 
+         /*디폴트값이 enabled :enabled 빼도 같음*/
+        input:disabled {background-color: aquamarine;}
+
+        html { scroll-behavior: smooth;}
+        .contents {height: 500px;}
+        #intro:target { background-color: antiquewhite;  } /*앵커대상에 스타일을 적용하는 타겟선택자. 원페이지 홈페이지에 적용*/
+        #room:target { background-color: aqua;}
+        #reservation:target {background-color: bisque;}
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" value="ena">
+        <input type="text" disabled value="dis">
+       
+    </form>
+    <nav class="navi">
+        <ul>
+            <li><a href="#intro">이용 안내</a></li>
+            <li><a href="#room">객실 소개</a></li>
+            <li><a href="#reservation">예약 방법 및 요금</a></li>
+            <li><a href="6.ps-2.html">예약하기</a></li>
+        </ul>
+    </nav>
+    <div id="intro" class="contents">
+        <h2>이용 안내</h2>
+    </div>
+    <div id="room" class="contents">
+        <h2>객실 소개</h2>
+    </div>
+    <div id="reservation" class="contents">
+        <h2>예약 방법 및 요금</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+ul { list-style: none;} /* 앞에 쩜 삭제 */
+a { text-decoration: none; color: black;} /*기본적으로 요렇게 해두고 시작 */
+div { background-color: antiquewhite; letter-spacing: 1px; line-height: 40px; text-align:center}
+/* 텍스트 스타일 속성 232쪽 */

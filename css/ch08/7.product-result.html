@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body { height: 100%;} /*이게 있어야 밑에줄 작동. 부모크기?! */
+        #container {height: 100%; background-color: aquamarine;}
+        .cls1 { margin:0 auto; width: 100px; background-color: beige;}
+         /* width 값이 없으면 폭을 전부 차지하기때문에 중앙정렬이라는 개념이 없다*/
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="cls1">레드향</div>
+        <div class="cls2">빨간향</div>
+    </div>
+</body>
+</html>
+
+<!-- 269쪽
+Display:?
+
+block
+inline
+inline-block: 위치는 인라인처럼, 기능은 블락처럼(pading, width 등 속성을처리 등)
+none 화면에 없어졌으면 좋겠다. 존재자체를 없에는
+
+    안보이게하는법
+        visibility: hidden; 안보이긴 하는데 공간차지함
+        display: none; 태그자체를 문서에서 없애는식(있긴한데 없었던것처럼)
+        opacity 투명도. 비추. 성능많이잡아먹는다. 투명이 필요하면 씀
+-->

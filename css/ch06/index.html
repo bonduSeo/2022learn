@@ -1,0 +1,35 @@
+<!--
+    태그선택자
+    클래스선택자 .
+    아이디선택자 #
+        *{} : 전체선택자
+        *{padding:0; margin:0;} 이런식으로 178쪽
+        
+    선택자{속성1:속성값1; 속성2:속성값2}
+
+    선택자부터 이해하고, 속성은 너무방대함. 중요한것들 몇가지만하고 프로젝트하면서 차차
+-->
+<!-- css쓰느방법 세가지,
+바디 안에 직접, 헤드의 스타일안에, css파일을 따로 만들어서 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {font-weight:bold;}  /*  모든div에 볼드를 멕인다 */
+        .cls1 { color: blue}  /* cls1에 블루 */
+        #id1 {background-color: antiquewhite;}
+    </style>
+      <!-- 스타일태그 안의 주석은 위와같이 
+        위 경우 폰트 등 적용 우선순위 법칙이 있다. 
+    자세하면 우선순위가 높거나 아래에 적힌것, 아니면 important 명령 등-->
+</head>
+<body>
+    <div>0000</div>
+    <div class="cls1">aaaa</div>    
+    <div class="cls1" id="id1">bbbb</div>
+</body>
+</html>

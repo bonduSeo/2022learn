@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td, th { border: 1px solid #000;}
+    </style>
+    <!-- 이건 나중에 css에서 할껀데 맛보기-->
+</head>
+<body>
+    <h1>테이블</h1>
+    <!--
+    테이블도 90년대초엔 레이아웃짤때 썼지만 지금은 css로
+    지금 테이블은 정말로 테이블을 써야할때
+    -->
+    <table>
+        <caption>학생리스트</caption>
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+            <!--th는 시맨틱태그-->
+        </tr>
+        </thead>
+        <tbody>
+         <tr>
+            <td>홍길동</td>
+            <td>22</td>
+            <td>남자</td>
+        </tr>
+        <tr>
+            <td>신사임당</td>
+            <td>24</td>
+            <td>여자</td>
+        </tr>
+        <tr>
+            <td>신사임당</td>
+            <td>24</td>
+        </tr> <!--테이블은 비어있더라도 td해놔야함-->
+        <tr>
+            <td>신사임당</td>
+            <td>24</td>
+            <td>여자</td>
+        </tr>
+        </tbody>
+        <!--가운데정렬 등은 예전에는 썼겠지만 요즘엔 다 css로-->
+    </table>
+</body>
+</html>

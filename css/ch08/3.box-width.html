@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { border: 1px solid #000; margin-bottom: 10px; padding: 5px;}
+        .box1 {width: 400px; height: 100px;}
+        .box2 {width: 50%; height: 100px; background-color: antiquewhite;} 
+        /* 퍼센트는 부모의크기(브라우저의)에따라 달라짐 
+        box2 높이에 88px 주면 깔끔하게됨. 패딩값, 보더값등을 고려한*/
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box1">
+        <div class="box2"></div> <!--결과페이지에서 부모의 크기에따라 변경되는것을 확인-->
+    </div>
+</body>
+</html>

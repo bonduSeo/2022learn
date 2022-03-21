@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;} /*이거를 거의 기본적으로 적용*/
+        nav ul { list-style: none;} 
+        nav > ul > li {
+            display: inline-block;
+            padding: 20px;
+            margin: 0 20px;
+            border: 1px solid #222; /* #222222 와 같음 원래 6자리 같은값이면 요렇게 단축표기*/
+            cursor: pointer; 
+            /*
+            하이퍼링크같은것은 밑에서 a태그로 잘쓰지는 않고 
+            일단 요렇게 커서만 바뀌게 한다음 JS 처리
+            */
+        }
+        /* 
+        nav ul nav안의 ul에만 적용(단계는 상관없고 밑이기만하면됨).
+        nav, ul 둘다 적용
+        nav > ul 직속 밑에있는 단계의 ul만 적용
+        */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li>menu 1</li>
+                <li>menu 2</li>
+                <li>menu 3</li>
+                <li>menu 4</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

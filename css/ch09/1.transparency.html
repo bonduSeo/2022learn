@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {  
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        #box1 {
+            color: aqua; /*컬러는 자식요소에 상속되나, 백그라운드컬러는 상속안된다*/
+            background-color: #00000032;
+            /*16진수 색표기에도 투명도 표기 가능
+            6자리 뒷쪽에, 00투명- ff불투명, 80 50% */
+          }
+          #box2 {
+            background-color: rgba(0, 0, 0, 0.247);   
+          }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        fff
+        <div>ddd</div>
+    </div>
+    <div id="box2"></div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* label이 input 을 담고있는지만 유지하고 미션*/
+        ul { list-style: none;}
+        input:checked + span {
+            color: red;
+            font-weight: bold;
+            background-color: aquamarine;
+        }
+    </style>
+    
+</head>
+<body>
+    <ul>
+        <li>
+            <label><input type="radio" name="room" checked><span>기본형</span></label>
+        </li>
+        <li>
+            <label><input type="radio" name="room"><span>가족형</span></label>
+        </li>
+    </ul>
+</body>
+</html>

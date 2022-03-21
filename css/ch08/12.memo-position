@@ -1,0 +1,9 @@
+position ?
+
+static 기본적인 디폴트 포지션. 레프트라이트 등이 안먹힘
+relative 스태틱이랑 비슷, 하지만 레프트라이트 조정먹힘
+absolute 헷갈리는친구. relative랑비슷하긴한데 부모가 무조건있어야함
+        부모기준으로 상하좌우움직임. 부모는 static빼고 다됨
+fixed 스크롤을 내려도 화면에 고정되어있는 요소
+
+    left right top bottom

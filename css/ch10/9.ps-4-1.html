@@ -1,0 +1,55 @@
+<!-- 347쪽-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*
+    li .new  li의 자식이면서 new 클래스
+    li.new   li이면서 new클래스를 가진녀석
+    */
+   /* li.new {color: rgb(4, 0, 255);} */
+   li {padding: 5px; }
+   li > span { 
+        display: inline-block;
+        width: 50px;}
+    li.new::after {
+        position: relative;
+        top: -1.5px;
+        content: 'NEW!!!!';
+        font-size: x-small;
+        padding: 2px 4px;
+        margin: 0 10px;
+        border-radius: 2px;
+        background-color: #f00;
+        color: #fff;
+    }
+    </style>
+
+    </head>
+<body>
+    <div class="container">
+        <h1>제품 목록</h1>
+        <ul>
+            <li class="new"><span>제품 A</span></li>
+            <li class="new"><span>제품 B</span></li>
+            <li ><span>제품 C</span></li>
+            <li class="new"><span>제품 D</span></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+<!-- 
+>
+,
++
+~
+
+
+-->

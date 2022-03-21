@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1 {background-color: rgb(225, 240, 143); color: brown;}
+        .cls1,#id1 {color: pink}
+        div {color:red}
+        div {color:blue} /*  우선순위관련해서 id>class>div */
+    </style>
+</head>
+<body>
+    <div class="cls1">aaa</div>
+    <div id="id1" style="color:chartreuse">bbb</div> <!--인라인스타일-->
+    <!-- 제대로 된 코더라면 이렇게 직접 스타일 먹이지는 않는다-->
+    <div style="color:rgb(255, 0, 0)">accc</div> <!--색 누루면 rgb색변환할수있음-->
+    <div style="color:rgba(47, 163, 163, 0.555)">asdfsadf</div> <!--rgba에서 a는 불투명도. 0에서1사이 값-->
+</body>
+</html>

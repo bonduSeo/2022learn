@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .desc {
+            background-color: cadetblue;
+            width: 150px;
+            height: 150px;
+            border: 5px dashed red;
+            margin-bottom: 15px;
+            padding: 20px;
+        }
+        #clip-padding {
+            background-clip: padding-box;
+        }
+        #clip-content {
+            background-clip: content-box;
+        } /*배경색상말고 배경이미지는 background-origin */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="desc" id="clip-border"></div>
+        <div class="desc" id="clip-padding"></div>
+        <div class="desc" id="clip-content"></div>
+    </div>
+</body>
+</html>

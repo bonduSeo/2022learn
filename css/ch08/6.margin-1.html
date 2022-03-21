@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+         /*   display: inline-block;  /*  인라인처럼 보이고 블락속성도 갖는(원래div는 블락 */
+         /* 블락값일때는 마진중첩현상이 있다. 마진이 큰것기준으로 중첩됨. 인라인때는 없네*/
+            width:100px; height: 100px; background-color: bisque;}
+        #margin1 { margin:50px;}
+        #margin2 { margin:30px 50px;} /*위아래 좌우;*/
+        #margin3 { margin:30px 20px 50px;} /*위 좌우 밑 */
+        #margin4 { margin: 10px 20px 30px 40px;} /* 위부터시계방향*/
+    </style>
+</head>
+<body>
+    <div id="margin1"></div>
+    <div id="margin2"></div>
+    <div id="margin3"></div>
+    <div id="margin4"></div>
+</body>
+</html>
+
+<!--패딩도 매커니즘이 같다.-->

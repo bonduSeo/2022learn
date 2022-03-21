@@ -1,0 +1,41 @@
+<!--277쪽-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {text-align: center; font-size: 3em; vertical-align: middle;  }
+        #container {width: 1200px; margin: 20px;}
+        header {height: 120px; background-color: antiquewhite;}
+        main {height: 600px;}
+        section {float: left; height: 100%;} /* 100%란말은 부모요소와 같은 값*/
+        footer {/*clear: both;*/ height: 100px; background-color: rgb(77, 77, 100);} 
+        /*main에서 높이값을 설정했다면 footer에서 clear하지 않다도 같은 결과를 나타냄.
+        그렇지 않을 경우 클리어 하지 않으면 푸터가 위에붙어서 이상한 결과값
+        어찌되었근 float를 썼다면 clear를 꼭 쓰도록 */
+        section:nth-child(1) {background-color: aqua; width: 250px;}
+        section:nth-child(2) {width: 800px; background-color: rgb(255, 212, 94);} 
+        section:nth-child(3) {width: 150px; background-color: brown;}
+        /*앞에 선택자 main 없었을땐 안됫는디 암튼 이런방법도 있음
+        질문탐구결과 =>부모기준으로 자식 번호
+        그러니까 메인 없을땐 위 div의 두번째 차일드
+        자세한내용은 구글 css nth-child 검색
+        */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>헤더</header>
+        <main>
+            <section id="st1">사이드 바</section>
+            <section id="st2">본문</section>
+            <section>사이드바</section>
+        </main>
+        <footer>푸터</footer>
+    </div>
+</body>
+
+</html>

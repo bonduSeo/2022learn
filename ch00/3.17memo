@@ -1,0 +1,26 @@
+JQ 자바스크립트를 도와주는. 특징은 무겁다
+JS자바스크립트
+VS 바닐라스크립트: 순수하게 자바스크립트로만 개발하는것
+TS타입스크립트, 자바스크립트에 타입을 부여한것?!
+
+
+
+Rem, Em 관련 (폰트크기)
+html: font-size: 17px;
+1rem; =17px;
+1.5rem; = 25.5px;
+---------------
+
+html: font-size: 10px;
+<body>
+<div class="cls1">
+    <div class="cls2">
+    </div>
+    </div>
+</body>
+.cls1 {font-size:2em;}  =====20px;
+.cls2 {font-size:2em;}  =======40px;
+
+rem과 em의 차이. em은 바로 위의 부모의 값에 영향을 받음
+
+자세한건 구글검색 ㄱㄱ

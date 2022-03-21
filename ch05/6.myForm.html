@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 이건 알아야되는것을 종합적으로-->
+    <h1>My Form</h1>
+    <form action="/join">
+        <div><input type="text" name="iuser" value="1" readonly></div>
+        <div><input type="hidden" name="iuser" value="1"></div>
+        <div>
+            <input type="text" name="uid" placeholder="user id" autofocus required>
+            <!-- required 는 비어있으면 제출하지않음 뭐라도 적혀있으면 넘어가기때문에 효용이 크지는 않다. -->
+        </div>
+        <div><input type="password" name="upw" placeholder="user pasword" required></div>
+        <div><label>프사 : <input type="file" name="pic" accept="image/*" multiple></label></div>
+        <!-- accept="image/*" 는 이미지만, multiple은 여러개 동시 선택가능 -->
+        <br>
+        <div><label>남긴 말 <textarea cols="20" rows="5" name="cmt" >ㅠㅠㅠㅠ</textarea></label></div>
+        <!-- 텍스트에어리어 크기조절 당분간 이걸 쓰면되긴한데 나중에 css로 다함-->
+        <!--텍스트에어리어는 value(기본값)이 안먹힘, 대신 저기 ㅜㅠㅠ자리에 치면 기본값-->
+        <div>
+            <label>
+                지역:
+                <select name="location">
+                    <option>서울</option>
+                    <option>대전</option>
+                    <option>대구</option>
+                    <option>부산</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>
+                지역:
+                <select name="location">
+                    <option value="1">서울입니다</option>
+                    <option value="2">대전입니다</option>
+                    <option value="3" selected>대구입니다</option> <!-- 체크박스, 라디오엔 checked 와 같은 기능-->
+                    <option value="4">부산입니다</option>
+                    <!-- 위위 셀렉트같은경우 조인하면 서울, 대구 등의 값이 보내진다
+                    하지만 밑 셀렉트는 서울입니다를 선택하면 1의값이 전송됨-->
+                </select>
+            </label>
+        </div>
+        <div>
+            취미 :
+            <lable><input type="checkbox" name="hobbit" velue="1" checked>농구</lable>
+            <lable><input type="checkbox" name="hobbit" velue="2">축구</lable>
+            <lable><input type="checkbox" name="hobbit" velue="3" checked>배구</lable>
+            <lable><input type="checkbox" name="hobbit" velue="4">탁구</lable>
+        </div>
+        <div>
+            성별 :
+            <label>여성<input type="radio" name="gender" value="f" checked></label>
+            <lable>남성<input type="radio" name="gender" value="m"></lable>
+        </div>
+        <div>
+            <input type="submit" value="join">
+            <input type="reset" value="reset">
+        </div>
+        <!-- 체크박스나 라디오 등의 인풋태그는 value값을 꼭 넣어줘야 값이 넘어간다
+        text같이 치는 타입은 그 정보가 넘어간다-->
+    </form>
+
+</body>
+
+</html>
+
+<!-- 이까지하면 html 끝났다고함
+다음시간부터 css-->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul { background-color: aliceblue;}
+        .navi ul li {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+        }
+        .navi a:link, .navi a:visited { /* visited 한번이라도 누른적있는것*/
+           display: block;
+           font-size: 14px;
+           color: #000;
+           padding: 10px;
+           text-decoration: none;
+           text-align: center;
+        /*   background-color: antiquewhite; */
+        }
+        .navi a:hover, .navi a:focus {
+            background-color: #000;
+            color: #fff;
+        } 
+     /*   .navi a:hover {
+            color: red;
+        }
+        .avi a:focus{
+            background-color: aqua;
+        } */
+        .navi a:active {background-color: #f00;} /*누를때, 누르고있을때*/
+
+    </style>
+</head>
+<body>
+    <nav class="navi">
+        <ul>
+            <li><a href="http://www.naver.com" target="_blink">이용안내</a></li>  <!-- shft alt 아래 하면 복사--> <!--target blink 새창뜨기-->
+            <li><a href="http://www.daum.net">객실소개</a></li>
+            <li><a href="http://www.google.com">예약방법 및 요금</a></li>
+            <li><a href="http://www.airbnb.com">예약하기</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+<!-- hover랑 focus랑?????
+focus 는 인풋을 받을수있는 항목에만 적용 키보드입력, 클릭 등
+input, select, textarea, a 태그  등등-->

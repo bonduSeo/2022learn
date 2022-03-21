@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 150px;
+            background-color: antiquewhite;
+        }
+        #pos1 {
+            position: relative; /*디폴트는 static 그때는 이동 안먹음*/
+            left: 30px;
+            top:20px;
+        }
+        #pos2 {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        #pos3 {
+            position:absolute;
+            bottom: 10px;
+            left: 10px; 
+            /* absolute만 줬을땐 큰변화없는데 탑, 바텀 넣지마자 확바뀜
+            부모요소인 body 기준으로 이동했기때문
+            +++ body가 아니고 웹브라우저 기준 으로 가는거같음?!?!!
+            */
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="pos1">Ex et adipisicing</p>
+    <p id="pos2">aslkdjf asldkfj dlkasdfasdfsdffj</p>
+    <p id="pos3">asd asdf jskldf</p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[href *= 'naver'] {color: green;} /* 속성값중에 naver이 포함되어있다면 */
+        a[href *= 'daum'] {color: aqua;}
+        a[href *= 'google'] {color: red;}
+    </style>
+</head>
+<body>
+    <p>링크로 이동된다.</p>
+    <ul>
+        <li><a href="http://www.naver.com">네이버</a></li>
+        <li><a href="http://www.daum.net">다음</a></li>
+        <li><a href="http://www.google.com">구글</a></li>
+        
+    </ul>
+</body>
+</html>
+
+
+<!--
+333p 속성선택자 정리
+
+많이쓸만한것
+[속성]
+[속성=값] 예: [target = _blank]
+[속성 ~= 값] 지정된 속성값이 포함된 요소(단어별)
+[속성 *= 값] 지정한 속성값의 일부가 일치하는 요소
+
+-->

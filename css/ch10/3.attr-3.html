@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*  [class = 'button'] {color: red;}*/
+      [class ~= 'button'] {color: red;} /*포함*/
+      div[class ~= 'button'] {color: aqua;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" class="flat">메뉴1</a></li>
+        <li><a href="#" class="flat">메뉴2</a></li>
+        <li><a href="#" class="button">메뉴3</a></li>
+        <li><a href="#" class="flat button">메뉴4</a></li>
+    </ul>
+    <div class="button">메뉴5</div>
+    <div class="flat button">메뉴6</div>
+</body>
+</html>
+
+<!-- id 나 class 로 선택 거의할수있기때문에 몰라도 상관없지만 알면 좋다-->

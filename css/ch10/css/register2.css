@@ -1,0 +1,38 @@
+ul {list-style: none;}
+label {
+    display: inline-block;
+    width: 120px;
+    line-height: 2rem;
+}
+legend {
+    font-weight: bold;
+}
+input {
+    line-height: 18px;
+}
+#signup input[required] 
+{
+    border: 1px solid red;
+    border-radius: 3px;
+}
+#signup input[readonly] {
+    border: none;
+   
+}
+/*   ?????? 335p */
+#signup input[type=text],
+#signup input[type=password],
+#signup input[type=tel],
+#signup input[type=email] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
+}
+button {
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}

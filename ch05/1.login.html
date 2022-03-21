@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/login" method="post"> <!-- action 주면 서밋하면 화면넘어감, 액션 주소로 매소드 방식으로 기능-->
+        <fieldset> <!-- 테두리가 생기는데 촌시려워서 잘안쓰긴함-->
+            <label>아이디: <input type="text" name="user_id"></label>
+            <label>아이디: <input type="text" name="user_id" value="mic"></label> 
+            <!--value 는 초기값, 왠만하면값주는경우가 없긴함. 초기화했을때 초기값으로 돌아간다.-->
+            <label>비밀번호: <input type="password" name="user_pw"></label> 
+            <!--label 태그는 아이디 라는 글자만 클릭해도 택스트 입력란으로 넘어가는 기능-->
+
+
+            <div>
+                <lable for="user_gender">성별</lable>
+            
+            </div>
+            <div>
+                <input type="text" id="user_gender" name="user_gender">
+            </div>
+            <input type="submit" value="로그인">
+            <input type="reset" value="초기화">
+
+        <!--input 태그의 type 속성은 130페이지에 나오는데 다외우진말고 자연스럽게 알아가는
+        많이 쓴는것 (위에나오는거)위주로-->
+        </fieldset>
+    </form>
+    <input type="reset" value="초기화"> <!--폼태그 바깥에 있으면 기능을 안함.-->
+    <input type="submit" value="서브밋버튼">
+    <input type="button" value="버튼버튼">
+      <!--타입이 button이면 모양만 버튼. 폼태그 안에있어도 전송안함-->
+    <button>버튼버튼2</button> <!--기본적으로 타입이 submit이라 아래와 같음-->
+    <button type="submit">버튼버튼3</button>
+  
+</body>
+</html>
