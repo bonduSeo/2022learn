@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
       /*  [class = 'button'] {color: red;}*/
-      [class ~= 'button'] {color: red;} /*포함*/
+      [class ~= 'button'] {color: red;} /* 클래스에 <단어> '버튼'포함하면  flatbutton 이라고 붙여쓰면 안됨*/
       div[class ~= 'button'] {color: aqua;}
     </style>
 </head>
@@ -24,3 +24,15 @@
 </html>
 
 <!-- id 나 class 로 선택 거의할수있기때문에 몰라도 상관없지만 알면 좋다-->
+
+
+<!--
+
+attribute
+    문서를 작성할때 적용시켰던 값
+    예  <input type="text" value='안녕'> 처음에 띄운 값
+
+property
+텍스트란에 바꿀수 있는 값. 텍스트 입력해서 변경된 값
+
+-->
