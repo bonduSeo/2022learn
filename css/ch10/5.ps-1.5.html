@@ -7,18 +7,23 @@
     <title>Document</title>
     <style>
         html {scroll-behavior: smooth;}
-        div img {width: 260px;}
-        #sec1:target > img { border: 3px solid red;}
+        div img {width: 260px; display: block;}
+     /*   #sec1:target > img { border: 3px solid red;}
         #sec2:target > img { border: 3px solid red;}
         #sec3:target > img { 
             border: 3px solid red;
             width: 500px;
+        } */
+        div:target > img {   /*요렇게 한번에 되네 개꿀. 더 구체적인게 필요하면 div[id^='sec]:target 요런식으러 줄수도 있음*/
+            border: 3px solid red;
+            width: 500px;
         }
+        div[id^='sec']:target {color: brown;}
 
     </style>
 </head>
 <body>
-    <ul>
+    <ul id="top">
         <li><a href="#sec1">섹션1</a></li>
         <li><a href="#sec2">섹션2</a></li>
         <li><a href="#sec3">섹션3</a></li>
@@ -26,14 +31,17 @@
     <div id="sec1">
         <h1>sec1</h1>
         <img src="images/1.jpg">
+        <a href="#top">top으로 이동</a>
     </div>
     <div id="sec2">
         <h1>sec2</h1>
         <img src="images/2.jpg">
+        <a href="#top">top으로 이동</a>
     </div>
     <div id="sec3">
-        <h1>sec2</h1>
+        <h1>sec3</h1>
         <img src="images/3.jpg">
+        <a href="#top">top으로 이동</a>
     </div>
 </body>
 </html>
