@@ -2,7 +2,7 @@ ul {list-style: none;}
 label {
     display: inline-block;
     width: 120px;
-    line-height: 2rem;
+    line-height: 3rem;
 }
 legend {
     font-weight: bold;
@@ -10,16 +10,6 @@ legend {
 input {
     line-height: 18px;
 }
-#signup input[required] 
-{
-    border: 1px solid red;
-    border-radius: 3px;
-}
-#signup input[readonly] {
-    border: none;
-   
-}
-/*   ?????? 335p */
 #signup input[type=text],
 #signup input[type=password],
 #signup input[type=tel],
@@ -30,6 +20,21 @@ input {
     padding: 5px;
     width: 200px;
 }
+
+/* 처음시도할때 안되었었음. 왜냐면 위에 덩어리를 아래 빨간테투리 지정 단락 아래쪽에
+적었기 때문. 
+나중에 작성한 스타일이 최종아웃풋 되는 경향이 있기때문에 항상 주의 */
+
+#signup input[required] {
+    border: 1px solid red;
+    border-radius: 3px;
+}
+#signup input[readonly] {
+    border: none;
+   
+}
+
+
 button {
     display: block;
     margin: auto;

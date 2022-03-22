@@ -2,8 +2,8 @@ form {
     width: 400px;
 }
 #signup label {
-  /*  float: left; */
-   display: inline-block;  /* ???  이것좀 공부해야함 */
+   /* float: left; */
+   display: inline-block; /* ???  이것좀 공부해야함 */
     font-size: 13px; 
     width: 110px;
 }

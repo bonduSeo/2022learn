@@ -17,7 +17,7 @@ h2 {
   float: left;
   padding: 0;
   margin: 10px;
-  overflow: hidden;   /* 범위넘어가는것 히든, 그밖의 스크롤 등 overflow 속성이 있다 */
+  overflow: hidden;  /* 범위넘어가는것 히든, 그밖의 스크롤 등 overflow 속성이 있다 */
   position: relative;
   height: 200px;
 }
@@ -34,25 +34,40 @@ h2 {
   참고 https://mytory.net/archives/10997
   */
 } 
+
 .prod-list div.caption {
+  background-color: rgba(0, 0, 0, 0.539);
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  padding-top: 40px;
+  transition: all ease 1s;
+  opacity: 0;
+  
+}
+
+.prod-list li:hover div.caption {
+  transform: translateY(-100%);
+  opacity: 1;
+}
+
+
+/* .prod-list div.caption {
   background-color: rgba(0, 0, 0, 0.473);
   color: #fff;
-  /* border: 1px solid red; */
   transition: all ease 1s;
   position: relative;
   height: 100%;
   text-align: center;
   padding-top: 50px;
   opacity: 0;
- 
-
-  
-  
 }
 
 .prod-list img:hover + div {
- /* background-color: brown; */
  transform: translateY(-100%);
  opacity: 1;
- 
-}
+
+} */
+ /* 구현했다가 문제점이 있어서 수정함
+ img에 hover 를 먹여서 구현했는데, 밑의 텍스트박스가 올라오면서
+ 커서를 가려버리게 되면서 작동에 이상이 생김. */
