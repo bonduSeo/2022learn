@@ -7,3 +7,41 @@ https://www.nextree.co.kr/p8622/
 
 yesviz.com/devices.php
 디바이스별 뷰포트와 해상도 정리 사이트 
+
+
+
+
+
+수업 프로젝트 관련
+
+
+1. (no JS) 강사주도 프로젝트(게시판)
+html, css, DB, PHP (CRUD)
+
+2    (no JS) 수강생 주도 프로젝트(자유)   (이때 윙윙 프론트엔드?)
+JS, Ajax, RestfulAPI, PHP고도화, vue.js
+
+3  (JS) 강사주도 프로젝트(인스타그램)
+
+4  (JS) 포트롶리오 프로젝트 (자유
+
+
+4/1 쉬는날.
+
+5/5 쉬는날
+5/6 시스템점검 전후로 강사님 신혼여행가는데
+다른 보조강사?와서 수업함
+
+
+
+---------
+잡담
+
+JS 처리속도가 겁나 느렸음
+크롬 v8엔진이 나오면서 JS속도를 비약적으로올림
+JS 플레이그라운드는 브라우저
+JS 플레이그라운드를 만들어주느친구가 Node.js
+Node.js + Express.js = Dynamic Web Server
+
+JAVA PHP 는 따로 프로그램설치해야함
+

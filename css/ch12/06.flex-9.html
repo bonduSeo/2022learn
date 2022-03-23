@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layout{
+            max-width: 600px; /* 600이하로는 부모와 같은크기, 위로는 안커진다 */
+            margin: 0 auto;
+            padding: 0;
+        }
+        .flexbox {         
+            display: flex; 
+            flex-wrap: nowrap; 
+            gap: 10px; /* item들 사이 간격 */
+            padding: 10px; 
+            background-color: #e8e8e8;
+        }
+        .item { flex-basis: 100px;  /* 일단기본적으로 200px 차지*/
+                min-height: 150px; 
+        }
+        .item:nth-child(odd) { background-color: aqua; flex-grow: 1; }
+        .item:nth-child(even) { background-color: blueviolet }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="flexbox">
+            <item class="item">content1content1</item>
+            <item class="item" style="flex-shrink: 0;">content2</item>
+            <item class="item">content3</item>
+            <item class="item" style="flex-shrink: 3;">content4</item>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    https://blogpack.tistory.com/863 
+    flex-grow
+    flex-shirink
+-->
