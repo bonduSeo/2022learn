@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         .layout{
-            max-width: 600px; /* 600이하로는 부모와 같은크기, 위로는 안커진다 */
+            max-width: 1000px; /* 600이하로는 부모와 같은크기, 위로는 안커진다 */
             margin: 0 auto;
             padding: 0;
         }
@@ -18,7 +18,7 @@
             padding: 10px; 
             background-color: #e8e8e8;
         }
-        .item { flex-basis: 100px;  /* 일단기본적으로 200px 차지*/
+        .item { flex-basis: 200px;  /* 플랙스박스 아이템 기본너비 차지*/
                 min-height: 150px; 
         }
         .item:nth-child(odd) { background-color: aqua; flex-grow: 1; }
@@ -29,7 +29,7 @@
     <div class="layout">
         <div class="flexbox">
             <item class="item">content1content1</item>
-            <item class="item" style="flex-shrink: 0;">content2</item>
+            <item class="item" style="flex-shrink: 1;">content2</item>
             <item class="item">content3</item>
             <item class="item" style="flex-shrink: 3;">content4</item>
         </div>

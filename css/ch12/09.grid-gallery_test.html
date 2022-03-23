@@ -20,8 +20,10 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas: 
-      "b1 b1 b2"
-      "b3 b4 b4"
+      "b1 b2 b3"
+      "b4 b4 b3"
+      "b7 b6 b6"
+      "b7 b5 b5"
       ;
      
     }
@@ -38,6 +40,7 @@
     .card:nth-child(4) { grid-area: b4 ;}
     .card:nth-child(5) { grid-area: b5 ;}
     .card:nth-child(6) { grid-area: b6 ;}
+    .card:nth-child(7) { grid-area: b7 ;}
   
     .card>header {
       font-size: 1.5rem;
@@ -117,7 +120,15 @@
         </figure>
         <p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
       </div>
-  
+      <div class="card">
+        <header>
+          <h3>사진 제목</h3>
+        </header>
+        <figure>
+          <img src="images\cup-7.jpg">
+        </figure>
+        <p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+      </div> 
       
   </div>
 </body>
