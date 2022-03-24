@@ -1,0 +1,109 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+
+a { 
+    transition: all linear .5s; 
+    display: inline-block;
+    text-decoration: none; color: #fff; background-color: goldenrod;    
+}
+a:hover { background-color: rgba(218, 165, 32, 0.7);  }
+
+ul { list-style: none; }
+.wrapper { padding-bottom: 70px; }
+.wrapper .hero { 
+    padding: 60px 30px;
+    display: grid; 
+    align-items: center;    
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    color: #fff;
+}
+.wrapper .hero h1 { font-size: 3rem; }
+.wrapper .hero article p { font-weight: 200; }
+.wrapper .hero article a {
+     margin-top: 1.5rem; padding: 1rem; 
+     border-radius: 0.3rem;
+}
+
+.breweries { padding: 20px; }
+.breweries ul { 
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+.breweries ul li a { 
+    position: absolute;
+    left: 8px;
+    bottom: 15px;
+    padding: 8px 15px; border-radius: 5px; 
+}
+.breweries ul li { 
+    height: 400px;
+    position: relative;
+    border: 1px solid rgb(207, 205, 205);  
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.breweries ul li figure { 
+    position: relative;
+    max-height: 220px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden;    
+}
+
+.breweries ul li figure img {  width: 100%; }
+
+.breweries ul li figure figcaption { 
+    position: absolute;  
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    background-color: #000000BC;
+    padding: .75rem;
+}
+
+.breweries ul li figure figcaption h3 { color: #fff; }
+
+.breweries ul li > p { margin-top: 1.3rem; }
+
+footer { 
+    position: fixed; left:0; bottom: 0; right:0; background-color: rgb(56, 56, 56);  
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

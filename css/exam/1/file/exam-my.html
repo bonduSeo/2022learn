@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Document</title>
+    <style>
+/* html의 font-size: 16px 건들지않으면 기본적으로 16px,
+        rem은 html 폰트사이즈기준
+    1rem = 16px 0.5rem= 8px
+    em은 바로 위의 부모의 기준 */
+
+        html { scroll-behavior: smooth;}
+        body { margin: 0 0 100px 0;}
+        @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+
+        p,
+        a {
+            font-family: 'Source Sans Pro', sans-serif;
+                    }
+   
+        * {box-sizing: border-box; }
+        ul {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(auto-fill , minmax(320px, 1fr));
+            margin: 30px 2vw;
+            padding-left: 0;
+            
+        }
+
+        #breweries li {
+            border: 1px solid rgb(184, 184, 184);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        
+        }
+        a {
+            text-decoration: none;
+            background-color: goldenrod;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            align-self: start;
+            border-radius: 5px;
+            transition: 1s;
+            
+        }
+
+        a:hover {
+            background-color: rgba(218, 165, 32, 0.61);}
+       .breweries p {
+            color: gray;
+            margin: 10px 10px 20px 10px;
+        }
+
+        .hero {
+            min-height: 300px;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-wrap: wrap;
+           
+        }
+        .hero h1 {
+            font-size: 40px;
+            color: white;
+            min-width: 270px;
+            width: 50%;
+            /* font-weight: bold; */
+            padding: 10px;
+            
+        }
+        
+
+        .hero p {
+            max-width: 600px;
+            color: white;
+        }
+
+        .hero article { padding: 30px 5px;}
+
+        #breweries figure { 
+            position: relative;
+           margin: 20px 0;
+           width: 90%;
+          
+            
+           
+        }
+
+        #breweries figure img {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            
+        }
+        #breweries figcaption {
+            background-color: rgba(0, 0, 0, 0.527);
+            width: 100%;
+            height: 35%;
+            position: absolute;
+            bottom: 4px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        #breweries li figure h3 {margin: 10px;}
+        footer {
+            display: block;
+            background-color: rgb(61, 61, 61);
+            color: white;
+            position: fixed;
+            bottom: 0%;
+            width: 100vw;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="hero" style="background: url('./img/img_1.jpg') center; background-size: cover;">
+            <h1>You thirsty?</h1>
+            <article>
+                <p>Explore local breweries with just one click and stirred by starlight across the centuries light years
+                    great turbulent clouds circumnavigated paroxysm of global death.</p>
+                <a href="#breweries">Browse Breweries</a>
+            </article>
+        </section>
+
+        <section class="breweries" id="breweries">
+            <ul>
+                <li>
+                    <figure>
+                        <!-- Photo by Quentin Dr on Unsplash -->
+                        <img src="img/item_1.jpg" alt="item_1.jpg">
+                        <figcaption>
+                            <h3>Billions upon billions</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Made in the interiors of collapsing stars star stuff harvesting star light venture billions upon
+                        billions Drake Equation brain is the seed of intelligence?
+                    </p>
+                    <a href="#">Visit Website</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/item_2.jpg" alt="item_2.jpg">
+                        <figcaption>
+                            <h3>Drake Equation</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Another world citizens of distant epochs from which we spring descended from astronomers Orion's
+                        sword shores of the cosmic ocean.
+                    </p>
+                    <a href="#">Visit Website</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/item_3.jpg" alt="item_3.jpg">
+                        <figcaption>
+                            <h3>Vast cosmic arena</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Galaxies the ash of stellar alchemy prime number science inconspicuous motes of rock and gas
+                        brain is the seed of intelligence.
+                    </p>
+                    <a href="#">Visit Website</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/item_4.jpg" alt="item_4.jpg">
+                        <figcaption>
+                            <h3>Wall Painting, VUOTO Project</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        We can finally share our work made for Vuoto project in Altomonte, one of the most beautiful
+                        experiences of our life.
+                    </p>
+                    <a href="#">Visit Website</a>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/item_5.jpg" alt="item_5.jpg">
+                        <figcaption>
+                            <h3>The Peregrine Falcons</h3>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        They are machines, alive and powerful.Their lines are inspired by those of the Urwerk watches:
+                        sharp and fluid. They are not specifically mechanical birds,
+                    </p>
+                    <a href="#">Visit Website</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2021. KOREA IT ACADEMY</p>
+    </footer>
+</body>
+
+</html>

@@ -7,13 +7,15 @@
   <style>
    #wrapper1{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));  /* 화면을 꽉 채울만큼 칼럼 너비를 늘려서 표시 */
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); 
+         /* 화면을 꽉 채울만큼 칼럼 너비를 늘려서 표시, auto-fit은 아래 fill와 같이 채워주는데 공간 남으면 맞추기까지 해줘 */
     margin-bottom:20px;
   }
   #wrapper2{
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));  /* 칼럼 최소 너비만큼 채워서 표시 */
-  }    
+                          /* repeat(갯수-자동으로채워줘, 너비-최소200으로하고 나머지는 각각 같은비율로)*/
+  }                         
   h1 {
     font-size:24px;
   }
