@@ -9,8 +9,24 @@ html, body { height: 100%;}
     grid-template-areas:
     "box1 box2"
     "box1 box3";
+}
+
+@media screen and (max-width:700px) {
+    .wrap {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 0px auto;
+        grid-template-rows: 40px 1fr;
+        grid-template-areas:
+        "box1 box2"
+        "box1 box3";
+    }
+
+  
 
 }
+    
+
 
 div.header {
     background-color: #FF3C4A;
@@ -96,12 +112,14 @@ input#idSearch {
     right: 5px;
     top: 5px;
     transition: all ease 1s;
+    box-shadow: 0.5px 1px 1px 1px rgb(170, 170, 170);
 }
 
 .profile__icon:hover {
     background-color: #ff5d68;
     transform: rotate(180deg);
     cursor:default;
+    box-shadow: -0.5px -1px 1px 1px rgb(170, 170, 170);
 }
 
 div.main {
@@ -113,7 +131,7 @@ div.main__header {
    
 }
 h2.main__title {
-    background: no-repeat;
+    background: url('http://unsplash.it/1200/600?image=495') no-repeat;
     background-size: cover; 
     
     color: white;
