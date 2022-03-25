@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 400px auto;
+            grid-template-areas: 
+            "box1 box2"
+            "box1 box3";
+        }
+        #aa {grid-area: box1; background-color: red;}
+        #bb {grid-area: box2; background-color: blue;}
+        #cc {grid-area: box3; background-color: green;}
+    </style>
+</head>
+<body>
+    <div id="aa">box1</div>
+    <div id="bb">boxb</div>
+    <div id="cc">boxc</div>
+    
+</body>
+</html>
