@@ -4,8 +4,8 @@ html, body { height: 100%;}
 .wrap {
     height: 100%;
     display: grid;
-    grid-template-columns: 150px auto;
-    grid-template-rows: 30px 1fr;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 40px 1fr;
     grid-template-areas:
     "box1 box2"
     "box1 box3";
@@ -13,29 +13,134 @@ html, body { height: 100%;}
 }
 
 div.header {
-    background-color: pink;
+    background-color: #FF3C4A;
     grid-area:box1;
+    color: white;
+}
+
+
+.header .logo {
+    font-family: 'Shrikhand';
+    text-align: center;
+    transition: 1s;
+}
+.logo:hover {
+    color: rgb(255, 247, 132);
+    cursor: default;
+    font-size: 2.2rem;
+}
+
+.nav__container {
+    display: flex;
+    flex-direction: column;
+   
+}
+.nav__title {
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.nav__title:hover {
+    background-color: #ff5d68;
+    cursor: default;
+}
+
+
+
+.nav__item a {
+    color: white;
+    text-decoration: none;
+   
+    display: block;
+    padding: 5px 30px;
+}
+
+.nav__item a:hover {
+    background-color: #ff656f;
+    cursor: default;
 }
 
 div.top-bar {
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     grid-area:box2;
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    /* grid-template-rows: 1000px; */
+    position: relative;
+}
+
+.search__form {
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+.search__label {
+    display: none;
+}
+input#idSearch {
+    width: 100%;
+    margin: 5px;
+    height: 25px;
+}
+.profile__icon {
+    background-color: rgb(139, 96, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    font-family: 'Shrikhand';
+    color: white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: all ease 1s;
+}
+
+.profile__icon:hover {
+    background-color: #ff5d68;
+    transform: rotate(180deg);
+    cursor:default;
 }
 
 div.main {
-    background-color: beige;
+    background-color: rgb(241, 241, 241);
     grid-area:box3;
+}
+div.main__header {
+    width: 100%;
+   
+}
+h2.main__title {
+    background: no-repeat;
+    background-size: cover; 
+    
+    color: white;
+    padding: 100px ;
+    text-align: center;
+    font-size: 2rem;
 }
 ul.listing-card__list {
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(200px, 1fr) );
+    gap: 10px;
+    margin: 10px;
+    list-style: none;
+    
 
+}
 
+li.listing-card__item {
+    border: 1px solid rgb(212, 212, 212);
+    padding: 10px;
+    background-color: white;
 }
 
 div.listing-card__image {
     width: 100%;
-    height:100vh;
+    height: 0;
+    padding-top: calc(750 / 500 * 100%);
     background-size: contain;
     background-repeat: no-repeat;
 }
