@@ -36,7 +36,7 @@ div.header {
 
 
 .header .logo {
-    font-family: 'Shrikhand';
+    font-family: 'Shrikhand', cursive;
     text-align: center;
     transition: 1s;
 }
@@ -66,7 +66,6 @@ div.header {
 .nav__item a {
     color: white;
     text-decoration: none;
-   
     display: block;
     padding: 5px 30px;
 }
@@ -128,20 +127,22 @@ div.main {
 }
 div.main__header {
     width: 100%;
+    border: 1px solid red;
    
 }
 h2.main__title {
     background: url('http://unsplash.it/1200/600?image=495') no-repeat;
     background-size: cover; 
-    
     color: white;
     padding: 100px ;
     text-align: center;
     font-size: 2rem;
+  
 }
+
 ul.listing-card__list {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(200px, 1fr) );
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
     gap: 10px;
     margin: 10px;
     list-style: none;
@@ -162,3 +163,9 @@ div.listing-card__image {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+div.listing-card__info {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+

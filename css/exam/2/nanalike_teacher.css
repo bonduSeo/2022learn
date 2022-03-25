@@ -1,0 +1,89 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+ul { list-style: none; }
+a { text-decoration: none; }
+html, body { height: 100%; }
+.wrap { 
+    height: 100%; 
+    display: grid; 
+    grid-template-columns: 200px 1fr;  
+    grid-template-rows: 65px 1fr;
+}
+.wrap .header { 
+    grid-row: 1/3; 
+    background-color: rgb(236, 19, 66);    
+    padding-top: 20px;
+}
+.wrap .header .logo {
+    font-family: 'Shrikhand', cursive;
+     color: #fff; text-align: center; 
+    }
+.nav__title { 
+    display: block; background-color:  rgb(235, 88, 119); width: 100%; 
+    padding: 10px 20px; color: #fff;
+    margin-top: 40px;
+ }
+.nav__list .nav__item { margin: 10px 20px; }
+.nav__list .nav__item a { color: #fff; }
+
+
+.top-bar { background-color: rgb(235, 232, 232); display: flex; padding: 15px 10px; }
+.top-bar .search__form { height: 100%; }
+.top-bar .search__form .search__label { display: none; }
+.top-bar .search__form #idSearch { display: inline-block; padding: 10px 8px;  width: 100%; }
+.top-bar .search { flex-grow: 1; }
+
+.top-bar .profile { 
+    margin-left: 15px;
+    color: #fff;
+    width: 40px; height: 40px;
+    display: flex; justify-content: center; align-items: center;
+    background-color: blueviolet; border-radius: 50%; 
+    box-shadow: 1px 1px 2px 1px rgb(206, 206, 206);
+}
+
+.top-bar .profile .profile__icon { 
+    font-family: 'Shrikhand', cursive;
+}
+
+.main .main__header { 
+    position: relative;
+    height: 250px;
+    background: url('http://unsplash.it/1200/600?image=495') no-repeat;
+    background-size: cover;   
+}
+
+.main .main__header .main__title { 
+    color: #fff; font-size: 3rem;
+    background-color: #00000040;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__body { height: 100%; }
+.listing-card { height: 100%; }
+.main__body .listing-card .listing-card__list {     
+    height: 100%; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 25px 20px;
+    gap: 25px;
+    background-color: rgb(238, 236, 236);
+    align-content: start;
+}
+
+.main__body .listing-card .listing-card__list .listing-card__item {
+    height: 360px;
+    background-color: #fff;
+    padding: 1.2rem 1.2rem 2.5rem 1.2rem;
+}
+
+.main__body .listing-card .listing-card__list .listing-card__item .listing-card__image {
+   height: 80%;
+   background-size: cover;
+}
+
+.listing-card__item .listing-card__info { margin-top: 15px; }
+.listing-card__item .listing-card__info .listing-card__date { margin-top: 6px; }
