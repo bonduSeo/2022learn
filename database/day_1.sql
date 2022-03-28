@@ -21,13 +21,13 @@ CREATE TABLE productTBL(
 	cost INT NOT NULL,
 	MAKEDATE DATE,
 	company CHAR(5),
-	amount INT NOT null
+	amount INT NOT NULL
 );
 
--- int:정수, 실수(소수점이 있으면)
+-- int:정수, 실수(소수점이 있으면) 
 
 
--- CRUD, DML (데이터 조작어)
+-- CRUD, DML (데이터 조작어) 
 -- Create ( insert문)
 /*
 INSERT INTO  테이블명
