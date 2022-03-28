@@ -130,6 +130,7 @@ SELECT * FROM membertbl
 WHERE membername LIKE '나%';
  -- 나로 시작하는
 
+
 -- Update (update문)
 /*
 	update 테이블명
