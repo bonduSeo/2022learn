@@ -1,3 +1,5 @@
+--DDL (정의어)
+
 CREATE DATABASE test1;
 DROP DATABASE test1;
 
@@ -117,7 +119,16 @@ SELECT * FROM membertbl
 	WHERE memberaddress ='부산시'
 		AND membername = '신사임당';
 		
+-- LIKE문은 문자열이 포함된 레코드를 찾을 때.
+SELECT * FROM membertbl
+WHERE membername LIKE '%팅%';
 
+SELECT * FROM membertbl
+WHERE membername LIKE '%이%';
+
+SELECT * FROM membertbl
+WHERE membername LIKE '나%';
+ -- 나로 시작하는
 
 -- Update (update문)
 /*
@@ -125,4 +136,35 @@ SELECT * FROM membertbl
 	set 수정하고 싶은 컬럼명 = 변경하고 싶은 값
 	where 레코드 선택
 */
+UPDATE membertbl
+SET membername = '게일'
+WHERE memberid = 7;
+-- update 문은  where절이 거의 필수다. 왜나면 데이터가 모두 바뀌거나 위험함
+
+UPDATE membertbl
+SET membername = 'gugu'
+, memberaddress = '강원도'
+WHERE memberid = '9';
+
+/*
+	my name is hong
+표기법-작명
+
+camel case			: myNameIsHong
+pascal case			: MyNameIsHong
+snake case			: my_name_is_hong
+cabob case (케밥)	: :my-name-is-hong
+
+*/
 -- Delete (delete문)
+/*
+delete from 테이블명 whrere 절
+*/
+DELETE FROM membertbl
+WHERE memberAddress IS NULL; 
+
+-- is not null 널이 아닌친구들
+
+
+DELETE FROM membertbl
+WHERE memberId = 8;
