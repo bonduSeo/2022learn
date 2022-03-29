@@ -1,3 +1,5 @@
+--DCL (데이터 제어어)유저만들고 권한주는 -아직안배움
+
 --DDL (정의어)
 
 CREATE DATABASE test1;
@@ -18,16 +20,17 @@ DROP TABLE membertbl;
 
 CREATE TABLE productTBL(
 	productName CHAR(4) PRIMARY KEY,
-	cost INT NOT NULL,
+	cost INT UNSIGNED NOT NULL,
 	MAKEDATE DATE,
 	company CHAR(5),
 	amount INT NOT NULL
 );
 
--- int:정수, 실수(소수점이 있으면) 
+-- int:정수, 실수(소수점이 있으면)  
+-- signed = 음수양수 /  unsigned = 양수만, 표현범위 2배 / 디폴트는 signed
 
+-- CRUD, DML (데이터 조작어)  (insert, select, update, delete)
 
--- CRUD, DML (데이터 조작어) 
 -- Create ( insert문)
 /*
 INSERT INTO  테이블명
@@ -39,17 +42,17 @@ VALUES
 INSERT INTO membertbl
 (memberid, membername, memberaddress)
 VALUES
-(1, '홍길동','서울시');
+('1', '홍길동','서울시');
 
 INSERT INTO membertbl
 (memberid, membername, memberaddress)
 VALUES
-(2, '홍길동동동','서울울시');
+('2', '홍길동동동','서울울시');
 
 INSERT INTO membertbl
 (memberid, membername)
 VALUES
-(3, '홍길동');
+('3', '홍길동');
 
 INSERT INTO membertbl
 (membername, memberid)
@@ -70,6 +73,7 @@ VALUES
 (5, '신사임당'),
 (6, '유관순'),
 (7, '나이팅게일');
+
 
 INSERT INTO membertbl
 VALUES
@@ -110,14 +114,15 @@ SELECT * FROM membertbl
 WHERE memberaddress IS NULL;
 -- null 인 항목
 
-SELECT * FROM membertbl
+SELECT * FROM test1.membertbl
 WHERE memberaddress != '서울시'
 or memberaddress IS NULL;
 -- 난 둘돠 
+-- 테이블명 앞에 데이터베이스명. 붙이면 다른데이터베이스 선택되어있어도 테이블 지정할수있음
 
 SELECT * FROM membertbl
 	WHERE memberaddress ='부산시'
-		AND membername = '신사임당';
+	AND membername = '신사임당';
 		
 -- LIKE문은 문자열이 포함된 레코드를 찾을 때.
 SELECT * FROM membertbl
@@ -141,6 +146,7 @@ UPDATE membertbl
 SET membername = '게일'
 WHERE memberid = 7;
 -- update 문은  where절이 거의 필수다. 왜나면 데이터가 모두 바뀌거나 위험함
+-- 특히 where 절에 pk를 넣는 경우가 많음
 
 UPDATE membertbl
 SET membername = 'gugu'
