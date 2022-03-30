@@ -153,3 +153,138 @@ SELECT i_hobbit, nm FROM t_hobbit;
 INSERT INTO t_hobbit_2
 (hobbit_id, NAME)
 SELECT i_hobbit + 3, nm FROM t_hobbit;
+
+
+-- update 구문 
+
+-- emp_no: 10001의 모든 salary를 1,000 씩 올리고 싶다.
+SELECT * FROM salaries;
+
+UPDATE salaries
+SET salary = salary + 1000
+WHERE emp_no = 10001;
+SELECT * FROM salaries;
+
+-- insertf ignore p213 에러나도 무시하고 계속 실행
+SELECT * FROM t_hobbit_2;
+
+INSERT IGNORE INTO t_hobbit_2
+(hobbit_id, NAME)
+VALUE
+(7, '탁구');
+INSERT IGNORE INTO t_hobbit_2
+(hobbit_id, NAME)
+VALUE
+(8, '스키');
+
+INSERT INTO t_hobbit_2
+(hobbit_id, NAME)
+VALUE (7, '탁구')
+ON DUPLICATE KEY UPDATE NAME = '수영';
+
+INSERT INTO t_hobbit_2
+(hobbit_id, NAME)
+VALUE (7, '탁구')
+ON DUPLICATE KEY UPDATE NAME = '탁구';
+-- 요렇게 주로쓰일듯
+
+DROP TABLE t_board;
+CREATE TABLE t_board (
+	i_board INT UNSIGNED PRIMARY KEY,
+	title VARCHAR(20) UNIQUE NOT NULL,
+	hits INT UNSIGNED DEFAULT 0
+);
+
+SELECT * FROM t_board;
+
+INSERT INTO t_board
+(i_board, title, hits)
+VALUES (2,'안녕', 0)
+ON DUPLICATE KEY UPDATE hits = hits + 1;
+-- 오... primary key or unique 일경우 dupicate key 적용됨
+
+
+SELECT * FROM dept_emp
+WHERE dept_no = 'd001';
+
+WITH dept_emp_d001(emp_no, from_date, to_date)
+AS (
+	SELECT emp_no, from_date, to_date FROM dept_emp
+	WHERE dept_no = 'd001'
+)
+SELECT * FROM dept_emp_d001;
+-- 잘안씀?! 왜냐면 아래처럼 쓸수도 있어서
+
+SELECT A.* FROM
+(
+	SELECT emp_no, from_date, to_date FROM dept_emp
+	WHERE dept_no = 'd001'
+) AS A;
+	
+	
+SELECT A.* FROM
+(
+	SELECT emp_no, from_date, to_date FROM dept_emp
+	WHERE dept_no = 'd001'
+) A;
+-- 이건 where절 써서 더 뭔가할수있음?!
+
+
+
+
+-- 미션
+USE `test1`;
+CREATE TABLE T_ORDER (
+	o_no INT PRIMARY KEY,
+	cus_no INT,
+	o_date DATE DEFAULT NOW(),
+	o_price INT DEFAULT 0,
+	FOREIGN KEY (cus_no) REFERENCES t_customer(cus_no)
+);
+-- now() 대신 current_time 해도됨
+-- foreign key 이름도 따로줄수도있음 constraint 이름
+SELECT * FROM t_order;
+
+INSERT INTO t_order 
+(o_no, cus_no)
+VALUES
+(1, 2);
+
+CREATE TABLE t_customer (
+	cus_no INT PRIMARY KEY,
+	nm VARCHAR(10) NOT NULL
+);
+
+DESC t_order;
+DESC t_customer;
+
+DROP TABLE t_order;
+DROP TABLE t_customer;
+
+--  ----------------
+-- Foreign Key 는 잘못된값이 입력되는것을 막기위해서..?
+
+
+-- 미션2
+INSERT INTO t_order
+(o_no, cus_no, o_price)
+VALUES
+(1,3,55000),
+(2,5,70000),
+(3,3,60000);
+
+INSERT INTO t_customer
+(cus_no, nm)
+VALUES
+(3, '홍길동'),
+(5, '이순신');
+
+UPDATE t_customer
+SET
+nm = '장보고'
+WHERE cus_no = 5;
+
+DELETE FROM t_order
+WHERE o_no = 2;
+
+SELECT o_no, o_price FROM t_order;
