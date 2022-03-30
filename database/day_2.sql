@@ -146,7 +146,10 @@ ORDER BY emp_no DESC, salary DESC;
 
 -- 젊은사람이 위로, 태어난날짜가 같다면 여자가 위로
 SELECT * FROM employees
-ORDER BY birth_date desc, gender desc;
+ORDER BY birth_date DESC, gender DESC;
+
+DESC employees; 
+-- 테이블 정보 보기
 
 
 
