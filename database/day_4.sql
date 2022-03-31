@@ -172,3 +172,31 @@ FROM salaries SA
 	INNER JOIN titles TT
 		ON SA.emp_no = TT.emp_no
 GROUP BY TT.title;
+
+
+-- 전체 개인 평균 연봉 중에서 가장 높은 연봉받는  사람의 부서 찾아내는거
+-- 개인평균연봉
+SELECT Z.emp_no, MAX(AV), DE.dept_no
+FROM (
+	SELECT emp_no, AVG(salary) AS AV
+	FROM salaries
+	GROUP BY emp_no
+	) AS Z
+INNER JOIN dept_emp DE
+	ON Z.emp_no = DE.emp_no;
+
+
+
+
+
+
+
+SELECT A.emp_no, AVG(A.salary), C.dept_name 
+FROM salaries A
+INNER JOIN dept_emp B
+ON A.emp_no = B.emp_no
+INNER JOIN departments C
+ON B.dept_no = C.dept_no
+GROUP BY A.emp_no
+ORDER BY AVG(A.salary)     
+LIMIT 1;
