@@ -91,6 +91,8 @@ select 보고싶은 컬럼명들 from 테이블명
 [having 그룹으로 묶는 조건에서의 조건]
 [order by 레코드 순서 지정]
 [limit 보고싶은 레코드 수]
+
+한번에 다 들어갈수도 있다. 이 순서대로 와야함. 암기하진말고 쓰다가 체크하면서하면됨
 */
 SELECT memberid, membername, memberaddress
 FROM membertbl;

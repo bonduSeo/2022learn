@@ -3,11 +3,14 @@
 -- dept_emp 테이블에서 dept_no 종류가 몇개가 있는지?
 SELECT DISTINCT dept_no FROM dept_emp;
 -- 중복된것 제거
+-- 이 테이블에서 pk가 2개, 두개 조합해서 값이 유일하면된다.(하나의 항목 중복은 있읈무 있다)
 
 -- 사원의 직무가 무엇이 있는지 selct 해주시오.
 SELECT * FROM titles;
 
 SELECT DISTINCT title FROM titles;
+
+
 
 
 -- limit? /// limit ?, ?
@@ -37,8 +40,9 @@ LIMIT 4, 6;
 -- 테이블을 복사하는 create table ... select
 CREATE TABLE departments_temp
 (SELECT * FROM departments);
--- 비교해보면 틀과 데이터만 복사됨. PK라던지 그런것들은 복사안됨.
+-- 비교해보면 틀과 데이터만 복사됨. 제약조건 - PK라던지 그런것들은 복사안됨.
 -- 필요하다면 지정한 일부열만 복사할수도 있다. 
+-- 임시로 데이터를 옮길때 쓰인다고함?!
 
 CREATE TABLE departments_temp2 AS
 SELECT * FROM departments;
@@ -75,7 +79,8 @@ SELECT dept_no, COUNT(emp_no) FROM dept_emp
 GROUP BY dept_no
 HAVING COUNT(*) >= 20000
 ORDER BY COUNT(emp_no) DESC;
--- group by 결과에서 조건을 더 줄때 having 절
+-- group by 결과에서 조건을 더 줄때(where절처럼) having 절
+-- where 절은 group by 하기전에 조건이 들어감
 
 SELECT dept_no, COUNT(emp_no) FROM dept_emp
 GROUP BY dept_no
@@ -126,7 +131,7 @@ CREATE TABLE t_hobbit_2 (
 	NAME VARCHAR(20) NOT NULL,
 	created_at DATETIME DEFAULT NOW()
 );
-
+-- now() = current_timestamp(), 날짜까지만: current_date()
 INSERT INTO t_hobbit_2
 (hobbit_id, NAME)
 VALUES
@@ -165,7 +170,7 @@ SET salary = salary + 1000
 WHERE emp_no = 10001;
 SELECT * FROM salaries;
 
--- insertf ignore p213 에러나도 무시하고 계속 실행
+-- insert ignore p213 에러나도 무시하고 계속 실행
 SELECT * FROM t_hobbit_2;
 
 INSERT IGNORE INTO t_hobbit_2
@@ -230,7 +235,22 @@ SELECT A.* FROM
 -- 이건 where절 써서 더 뭔가할수있음?!
 
 
-
+-- --
+/* 사람별 평균 급여에의 평균값보다 큰 사람들의 이름이 나오게 해주세요.  */
+SELECT * FROM employees 
+WHERE emp_no IN (
+	SELECT emp_no
+	FROM salaries
+	GROUP BY emp_no
+	HAVING AVG(salary) >= (
+		SELECT avg(avg_salary) FROM (
+			SELECT 1 as val, AVG(salary) AS avg_salary FROM salaries
+			GROUP BY emp_no
+		) A
+		GROUP BY val
+	)
+);
+-- 안해봄. 체크해보기
 
 -- 미션
 USE `test1`;
@@ -263,6 +283,7 @@ DROP TABLE t_customer;
 
 --  ----------------
 -- Foreign Key 는 잘못된값이 입력되는것을 막기위해서..?
+-- 참조한 테이블에 있는 값만 입력되게 하기 위해서
 
 
 -- 미션2
