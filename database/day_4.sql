@@ -87,12 +87,84 @@ FROM employees A
 		ON D.dept_no = C.dept_no;
 		
 		
--- 남녀사원들의 평균 연봉
-
+-- Q:남녀사원들의 평균 연봉
 SELECT
-	EM.gender, AVG(SA.salary)
+	EM.gender, AVG(SA.salary) AS AVG_salary_gender
 FROM employees EM
 	INNER JOIN salaries SA
 		ON EM.emp_no = SA.emp_no
 GROUP BY EM.gender;
 		
+		
+-- Q:부서별 제일 높은 평균연봉 값, 사람
+ -- 어렵다. 쌤 깃허브 참고
+SELECT emp_no, AVG(salary)
+FROM salaries
+GROUP BY emp_no;
+-- 사원번호별 평균연봉
+
+SELECT DE.dept_no, DP.dept_name, MAX(AA), NOAV.emp_no, EM.first_name, EM.last_name
+FROM (
+	SELECT emp_no, AVG(salary) AS AA
+	FROM salaries
+	GROUP BY emp_no
+) AS NOAV
+	INNER JOIN dept_emp DE
+		ON NOAV.emp_no = DE.emp_no
+	INNER JOIN departments DP
+		ON DE.dept_no = DP.dept_no
+	INNER JOIN employees EM
+		ON DE.emp_no = EM.emp_no
+GROUP BY DE.dept_no;
+-- 여기서 부서이름도 나오게하면?
+
+
+
+--
+
+SELECT X.dept_no, MAX(Z.avg_salary) AS max_salary
+FROM (
+	SELECT A.emp_no, AVG(B.salary) AS avg_salary 
+	FROM employees A
+		INNER JOIN salaries B
+			ON A.emp_no = B.emp_no
+	GROUP BY A.emp_no
+) AS Z
+	INNER JOIN dept_emp X
+		ON Z.emp_no = X.emp_no
+GROUP BY X.dept_no;
+-- 선생님코드
+
+
+SELECT z.dept_no, MAX(Z.avg_salary) AS max_salary
+FROM (
+	SELECT B.dept_no, A.emp_no, AVG(A.salary) AS avg_salary
+	FROM salaries A
+	INNER JOIN dept_emp B
+	ON A.emp_no = B.emp_no
+	GROUP BY B.emp_no
+) Z
+GROUP BY Z.dept_no;
+-- 은지씨코드 
+
+
+
+-- 부서별(부서이름) 연봉평균값, max값, min값 나오게 해주세요.
+
+SELECT DS.dept_no, DS.dept_name, AVG(SA.salary), MAX(SA.salary), MIN(SA.salary)
+FROM dept_emp DE
+	INNER JOIN salaries SA
+		ON DE.emp_no = SA.emp_no
+	INNER JOIN departments DS
+		ON DE.dept_no = DS.dept_no
+GROUP BY DE.dept_no;
+
+
+
+-- 직무별 연봉 평균값
+
+SELECT TT.title, AVG(salary)
+FROM salaries SA
+	INNER JOIN titles TT
+		ON SA.emp_no = TT.emp_no
+GROUP BY TT.title;
