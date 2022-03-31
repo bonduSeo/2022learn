@@ -157,7 +157,10 @@ FROM dept_emp DE
 		ON DE.emp_no = SA.emp_no
 	INNER JOIN departments DS
 		ON DE.dept_no = DS.dept_no
-GROUP BY DE.dept_no;
+GROUP BY DE.dept_no, DS.dept_name;
+-- mysql은 DS.dept_name 생략가능. but 오라클은 불가능
+-- 왜냐면, group by 로 묶으면 위에 select 에 적을수있는건
+-- 평균 맥스 등 그룹함수외에 그룹으로 묶었던 값들만 적을수 있다고함. (원래원칙은)
 
 
 
