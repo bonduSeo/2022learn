@@ -6,7 +6,7 @@ CREATE DATABASE test1;
 DROP DATABASE test1;
 
 CREATE TABLE memberTBL (
-	memberID CHAR(8) NOT NULL PRIMARY KEY,
+	memberID INT NOT NULL PRIMARY KEY,
 	memberName CHAR(5) NOT NULL,
 	memberAddress CHAR(20) null
 );

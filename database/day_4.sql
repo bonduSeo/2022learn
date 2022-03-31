@@ -11,3 +11,77 @@ CREATE TABLE t_member_hobbit (
 SELECT * FROM t_member_hobbit;
 
 DESC t_member_hobbit;
+
+SELECT * FROM information_schema.TABLE_CONSTRAINTS
+WHERE TABLE_NAME = 't_member_hobbit';
+-- 정보는 여기 저장된다고함
+
+--
+
+INSERT INTO t_member_hobbit
+(user_no, hobbit_no)
+VALUES
+(1,1);
+
+INSERT INTO t_member_hobbit
+(user_no, hobbit_no)
+VALUES
+(1,2);
+
+INSERT INTO t_member_hobbit
+(user_no, hobbit_no)
+VALUES
+(5,3), (5,7), (5,8);
+
+INSERT INTO t_member_hobbit
+(user_no, hobbit_no)
+VALUES
+(7,6);
+-- 정보입력, 아이디별 취미 입력함
+
+DROP TABLE membertbl;
+-- 포린키걸려있어서 드롭안된느데 gui에서 우클릭삭제하니까 됨 ㅠㅠ
+
+
+SELECT
+	B.*, A.* , C.*
+FROM t_member_hobbit A
+INNER JOIN membertbl B
+	ON A.user_no = B.memberID
+INNER JOIN t_hobbit_2 C
+	ON A.hobbit_no = C.hobbit_id;
+-- join 걸어쓰는방법은 여러방법이 있다고함
+-- 꼭 중간에 있는테이블을 기준안해도 되네.
+
+SELECT
+	B.memberName, B.memberAddress, C.name
+FROM t_member_hobbit A
+	INNER JOIN membertbl B
+		ON A.user_no = B.memberID
+	INNER JOIN t_hobbit_2 C
+		ON A.hobbit_no = C.hobbit_id;
+	-- 이렇게 깔끔하게 볼수도있다.
+	
+	/*
+	문제
+	사원번호, 사원명, (부서이름), 직책 나오게
+	*/
+	
+SELECT
+	A.emp_no, A.first_name, A.last_name, B.title
+FROM employees A
+	INNER JOIN titles B
+		ON A.emp_no = B.emp_no
+	INNER JOIN dept_emp C
+		ON A.emp_no = C.emp_no;
+-- 부서이름 빼고
+
+SELECT
+	A.emp_no, A.first_name, A.last_name, B.title, D.dept_name
+FROM employees A
+	INNER JOIN titles B
+		ON A.emp_no = B.emp_no
+	INNER JOIN dept_emp C
+		ON A.emp_no = C.emp_no
+	INNER JOIN departments D
+		ON D.dept_no = C.dept_no;
