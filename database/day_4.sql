@@ -85,3 +85,14 @@ FROM employees A
 		ON A.emp_no = C.emp_no
 	INNER JOIN departments D
 		ON D.dept_no = C.dept_no;
+		
+		
+-- 남녀사원들의 평균 연봉
+
+SELECT
+	EM.gender, AVG(SA.salary)
+FROM employees EM
+	INNER JOIN salaries SA
+		ON EM.emp_no = SA.emp_no
+GROUP BY EM.gender;
+		
