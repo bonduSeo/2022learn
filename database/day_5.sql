@@ -56,6 +56,12 @@ USE `test1`;
 SELECT *, IF(nm = '농구', 'basketball', IF(nm = '배구', 'volleyball','football')) AS EN_nm
 FROM t_hobbit;
 
+SELECT
+	CONCAT(nm,
+		if(nm = '농구', 'basketball',if(nm='배구','volleyball','football'))
+		)
+		FROM t_hobbit;
+-- 다름표현방식
 
 -- ifnull 자주쓰임
 
@@ -73,7 +79,7 @@ SELECT CASE nm
 			when '농구' THEN 'basketball'
  			when '배구' THEN 'volleyball'
  			when '축구' THEN 'football'
- 	end
+ 		end
 FROM t_hobbit;
  
  -- case when 조건식 then...
@@ -85,7 +91,7 @@ FROM t_hobbit;
  			ELSE '없음'
  	END AS eng
 FROM t_hobbit;
-
+-- 비교식형태 가능. nm 뿐이아니라 다른컬럼 사용가능./ 아래형태가 더 유연함
 
 --  이런것도 있다. 235p
 SELECT ASCII('A'), CHAR(65);
@@ -98,6 +104,14 @@ SELECT CONCAT_WS('_', 'A', 'B', 'C');
 --
 
 SELECT FORMAT(1/3, 12);
+
+SELECT FLOOR(11.9), CEIL(11.02352351), ROUND(11.53452, 3);
+-- floor:버림 ceil:올림 round:반올림
+
+SELECT FORMAT(FLOOR(124124.124124),0);
+
+SELECT round(123.1212413, 4);
+
 
 -- insert
 SELECT
